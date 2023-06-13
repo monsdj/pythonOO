@@ -14,10 +14,10 @@ def AskAnimalData() -> dict:
     values["age"] = askInteger("Entrez l'age en années de l'animal : ")
     values["arrived"] = input("Entrez la date d'arrivée de l'animal : ")
 
-    return values;
+    return values
 
 def AskBirdData() -> Bird:
-    values = AskAnimalData();
+    values = AskAnimalData()
     values["color"] = input("Entrez la couleur de l'oiseau : ")
     values["aviary"] = True if input("Necessite t'il une voliere ? y/-") == "y" else False
 
@@ -30,14 +30,14 @@ def askInteger(sentence) -> int:
     while(not value.isdigit()):
         value = input(sentence)
 
-    return int(value);
+    return int(value)
 
 def askFloat(sentence) -> float:
 
     while(True):
         try:
             value = float(input(sentence))
-            return value;
+            return value
         except:
             print("Valeur invalide, ressayez.")
 
